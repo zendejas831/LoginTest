@@ -16,8 +16,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class RegisterUserClass {
 
-    public String sendPostRequest(String requestURL,
-                                  HashMap<String, String> postDataParams) {
+    public String sendPostRequest(String requestURL, HashMap<String, String> postDataParams) {
 
         URL url;
         String response = "";
@@ -30,7 +29,6 @@ public class RegisterUserClass {
             conn.setRequestMethod("POST");
             conn.setDoInput(true);
             conn.setDoOutput(true);
-
 
             OutputStream os = conn.getOutputStream();
             BufferedWriter writer = new BufferedWriter(

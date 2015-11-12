@@ -19,14 +19,12 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
     private EditText editTextEmail;
 
     private Button buttonRegister;
-
     private Button buttonBack;
 
-    // Home ip
-    //private static final String REGISTER_URL = "http://10.0.0.213/Android/UserRegistration/register.php";
-    //School ip
-    private static final String REGISTER_URL = "http://10.117.226.200/Android/UserRegistration/register.php";
-
+    // Home ip v4
+    private static final String REGISTER_URL = "http://10.0.0.213/Android/UserRegistration/register.php";
+    //School ip v4
+    //private static final String REGISTER_URL = "http://10.117.226.200/Android/UserRegistration/register.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +37,9 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
-
-        buttonBack = (Button) findViewById(R.id.buttonBack);
-
         buttonRegister.setOnClickListener(this);
 
+        buttonBack = (Button) findViewById(R.id.buttonBack);
         buttonBack.setOnClickListener(this);
     }
 
@@ -70,7 +66,6 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
         class RegisterUser extends AsyncTask<String, Void, String>{
             ProgressDialog loading;
             RegisterUserClass ruc = new RegisterUserClass();
-
 
             @Override
             protected void onPreExecute() {

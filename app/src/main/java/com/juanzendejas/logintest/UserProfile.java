@@ -8,6 +8,7 @@ import android.widget.TextView;
 public class UserProfile extends AppCompatActivity {
 
     private TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

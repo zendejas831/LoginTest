@@ -18,22 +18,18 @@ import java.util.HashMap;
 public class ActivityLogin extends AppCompatActivity implements View.OnClickListener{
 
     public static final String USER_NAME = "USER_NAME";
-
     public static final String PASSWORD = "PASSWORD";
 
-    // Home ip
-    //private static final String LOGIN_URL = "http://10.0.0.213/Android/UserRegistration/login.php";
-    // School ip
-    private static final String LOGIN_URL = "http://10.117.226.200/Android/UserRegistration/login.php";
-
+    // Home ip v4
+    private static final String LOGIN_URL = "http://10.0.0.213/Android/UserRegistration/login.php";
+    // School ip v4
+    //private static final String LOGIN_URL = "http://10.117.226.200/Android/UserRegistration/login.php";
 
     private EditText editTextUserName;
     private EditText editTextPassword;
-
-    private Button buttonLogin;
-
     private TextView textViewForgotPassword;
 
+    private Button buttonLogin;
     private Button buttonUserRegister;
 
     @Override
@@ -45,28 +41,26 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         editTextPassword = (EditText) findViewById(R.id.password);
 
         buttonLogin = (Button) findViewById(R.id.buttonUserLogin);
-
-        textViewForgotPassword = (TextView) findViewById(R.id.changePassword);
-
-        buttonUserRegister = (Button) findViewById(R.id.buttonUserRegister);
-
         buttonLogin.setOnClickListener(this);
 
+        textViewForgotPassword = (TextView) findViewById(R.id.changePassword);
         textViewForgotPassword.setOnClickListener(this);
 
+        buttonUserRegister = (Button) findViewById(R.id.buttonUserRegister);
         buttonUserRegister.setOnClickListener(this);
     }
-
 
     private void login(){
         String username = editTextUserName.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+
         userLogin(username,password);
     }
 
     private void userLogin(final String username, final String password){
         class UserLoginClass extends AsyncTask<String,Void,String>{
             ProgressDialog loading;
+
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
@@ -99,6 +93,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
                 return result;
             }
         }
+
         UserLoginClass ulc = new UserLoginClass();
         ulc.execute(username,password);
     }

@@ -32,7 +32,6 @@ public class ActivityChangePassword extends AppCompatActivity {
 
         });
 
-
         newpass = (EditText) findViewById(R.id.newpass);
         alert = (TextView) findViewById(R.id.alertpass);
         changepass = (Button) findViewById(R.id.btchangepass);
