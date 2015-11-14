@@ -18,7 +18,7 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
     private EditText editTextPassword;
     private EditText editTextEmail;
 
-    private Button buttonRegister;
+    private Button buttonRegisterUser;
     private Button buttonBack;
 
     // Home ip v4
@@ -36,8 +36,8 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
 
-        buttonRegister = (Button) findViewById(R.id.buttonRegister);
-        buttonRegister.setOnClickListener(this);
+        buttonRegisterUser = (Button) findViewById(R.id.buttonRegisterUser);
+        buttonRegisterUser.setOnClickListener(this);
 
         buttonBack = (Button) findViewById(R.id.buttonBack);
         buttonBack.setOnClickListener(this);
@@ -45,7 +45,7 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
-        if(v == buttonRegister){
+        if(v == buttonRegisterUser){
             registerUser();
         }
         if(v == buttonBack){
@@ -83,15 +83,15 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
             @Override
             protected String doInBackground(String... params) {
 
-                HashMap<String, String> data = new HashMap<String,String>();
+                HashMap<String, String> data = new HashMap<>();
                 data.put("name",params[0]);
                 data.put("username",params[1]);
                 data.put("password",params[2]);
                 data.put("email",params[3]);
 
-                String result = ruc.sendPostRequest(REGISTER_URL,data);
-
-                return  result;
+                //String result = ruc.sendPostRequest(REGISTER_URL,data);
+                //return  result;
+                return ruc.sendPostRequest(REGISTER_URL,data);
             }
         }
 

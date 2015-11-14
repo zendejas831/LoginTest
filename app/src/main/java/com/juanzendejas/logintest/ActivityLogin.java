@@ -30,7 +30,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     private TextView textViewForgotPassword;
 
     private Button buttonLogin;
-    private Button buttonUserRegister;
+    private Button buttonRegisterRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +46,8 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         textViewForgotPassword = (TextView) findViewById(R.id.changePassword);
         textViewForgotPassword.setOnClickListener(this);
 
-        buttonUserRegister = (Button) findViewById(R.id.buttonUserRegister);
-        buttonUserRegister.setOnClickListener(this);
+        buttonRegisterRequest = (Button) findViewById(R.id.buttonRegisterRequest);
+        buttonRegisterRequest.setOnClickListener(this);
     }
 
     private void login(){
@@ -88,9 +88,9 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
 
                 RegisterUserClass ruc = new RegisterUserClass();
 
-                String result = ruc.sendPostRequest(LOGIN_URL,data);
-
-                return result;
+                //String result = ruc.sendPostRequest(LOGIN_URL,data);
+                //return result;
+                return ruc.sendPostRequest(LOGIN_URL,data);
             }
         }
 
@@ -103,7 +103,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         if(v == buttonLogin){
             login();
         }
-        if(v == buttonUserRegister) {
+        if(v == buttonRegisterRequest) {
             startActivity(new Intent(this, ActivityRegister.class));
         }
         if(v == textViewForgotPassword) {

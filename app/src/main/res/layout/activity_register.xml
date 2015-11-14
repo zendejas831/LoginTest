@@ -19,7 +19,9 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextName" />
+        android:id="@+id/editTextName"
+        android:inputType="textPersonName"
+        android:hint="@string/string_enter_name" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +31,9 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextUserName" />
+        android:id="@+id/editTextUserName"
+        android:inputType="text"
+        android:hint="@string/string_choose_username" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +44,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:id="@+id/editTextPassword" />
+        android:id="@+id/editTextPassword"
+        android:hint="@string/string_choose_password" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,13 +56,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:id="@+id/editTextEmail" />
+        android:id="@+id/editTextEmail"
+        android:hint="@string/string_enter_email" />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_register"
-        android:id="@+id/buttonRegister" />
+        android:text="@string/action_register"
+        android:id="@+id/buttonRegisterUser" />
 
 
 

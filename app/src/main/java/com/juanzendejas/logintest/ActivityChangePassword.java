@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 public class ActivityChangePassword extends AppCompatActivity {
 
-    EditText newpass;
-    TextView alert;
-    Button changepass;
+    EditText editTextNewPassword;
+    TextView textViewAlert;
+    Button buttonChangePassword;
     Button cancel;
 
     @Override
@@ -32,8 +32,8 @@ public class ActivityChangePassword extends AppCompatActivity {
 
         });
 
-        newpass = (EditText) findViewById(R.id.newPassword);
-        alert = (TextView) findViewById(R.id.alertPassword);
-        changepass = (Button) findViewById(R.id.buttonChangePassword);
+        editTextNewPassword = (EditText) findViewById(R.id.newPassword);
+        textViewAlert = (TextView) findViewById(R.id.alertPassword);
+        buttonChangePassword = (Button) findViewById(R.id.buttonChangePassword);
     }
 }
