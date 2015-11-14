@@ -13,15 +13,15 @@ public class ActivityChangePassword extends AppCompatActivity {
     EditText editTextNewPassword;
     TextView textViewAlert;
     Button buttonChangePassword;
-    Button cancel;
+    Button Buttoncancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
 
-        cancel = (Button) findViewById(R.id.buttonCancel);
-        cancel.setOnClickListener(new View.OnClickListener() {
+        Buttoncancel = (Button) findViewById(R.id.buttonCancel);
+        Buttoncancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
 
                 Intent login = new Intent(getApplicationContext(), ActivityLogin.class);
