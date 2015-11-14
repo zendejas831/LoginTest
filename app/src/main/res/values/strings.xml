@@ -11,6 +11,7 @@
     <string name="string_enter_email">Enter your email</string>
     <string name="string_username">Enter Username</string>
     <string name="string_already_registered">Already Registered</string>
+    <string name="string_change_password">Change your Password</string>
 
     <string name="button_register">Register</string>
     <string name="button_back">Back</string>
@@ -39,4 +40,5 @@
     <string name="title_activity_change_password">ActivityChangePassword</string>
 
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="string_new_password">New Password</string>
 </resources>
