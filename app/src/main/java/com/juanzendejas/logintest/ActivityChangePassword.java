@@ -20,7 +20,7 @@ public class ActivityChangePassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
 
-        cancel = (Button) findViewById(R.id.btcancel);
+        cancel = (Button) findViewById(R.id.buttonCancel);
         cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
 
@@ -32,8 +32,8 @@ public class ActivityChangePassword extends AppCompatActivity {
 
         });
 
-        newpass = (EditText) findViewById(R.id.newpass);
-        alert = (TextView) findViewById(R.id.alertpass);
-        changepass = (Button) findViewById(R.id.btchangepass);
+        newpass = (EditText) findViewById(R.id.newPassword);
+        alert = (TextView) findViewById(R.id.alertPassword);
+        changepass = (Button) findViewById(R.id.buttonChangePassword);
     }
 }
