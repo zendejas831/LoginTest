@@ -22,9 +22,11 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
     private Button buttonBack;
 
     // Home ip v4
-    private static final String REGISTER_URL = "http://10.0.0.213/Android/UserRegistration/register.php";
+    //private static final String REGISTER_URL = "http://10.0.0.213/Android/UserRegistration/register.php";
     //School ip v4
     //private static final String REGISTER_URL = "http://10.117.226.200/Android/UserRegistration/register.php";
+    // School server
+    private static final String REGISTER_URL = "http://athena.ecs.csus.edu/~zendejaj/rideshare/UserRegistration/register.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,7 @@ public class ActivityRegister extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if(v == buttonRegisterUser){
             registerUser();
+            finish();
         }
         if(v == buttonBack){
             startActivity(new Intent(this,ActivityLogin.class));

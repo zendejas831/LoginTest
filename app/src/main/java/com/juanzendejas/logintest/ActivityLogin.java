@@ -21,9 +21,11 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     public static final String PASSWORD = "PASSWORD";
 
     // Home ip v4
-    private static final String LOGIN_URL = "http://10.0.0.213/Android/UserRegistration/login.php";
+    //private static final String LOGIN_URL = "http://10.0.0.213/Android/UserRegistration/login.php";
     // School ip v4
     //private static final String LOGIN_URL = "http://10.117.226.200/Android/UserRegistration/login.php";
+    // School server
+    private static final String LOGIN_URL = "http://athena.ecs.csus.edu/~zendejaj/rideshare/UserRegistration/login.php";
 
     private EditText editTextUserName;
     private EditText editTextPassword;
